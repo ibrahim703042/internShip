@@ -1,0 +1,47 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:ui="http://java.sun.com/jsf/facelets"
+    xmlns:f="http://xmlns.jcp.org/jsf/core"
+    template="/resources/templates/dashboardTemplate.xhtml">
+    
+    <ui:define name = "contents">
+        <!-- ______________  begin breadcrumb ______________ -->
+        
+        <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item">
+                    <h:link outcome="/resources/templates/dashboardTemplate.xhtml" >
+                        Dashboard
+                    </h:link>
+                </li>
+
+                <li class="breadcrumb-item">
+                    <h:link outcome="/pages/admin/index.xhtml">
+                        Listes
+                    </h:link>
+                </li>
+                
+                <li class="breadcrumb-item active" aria-current="page">
+                    Administrateur
+                </li>
+
+            </ol>
+                
+        </nav>
+        
+        <!-- ______________end breadcrumb ______________ -->
+
+        <div class="row mt-5 pt-5">
+                <div class="col-md-12 mb-3">
+                    <div class="card">
+                        <div class="card-body">
+                            <h2>Modifier</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+    </ui:define>
+        
+</ui:composition>
