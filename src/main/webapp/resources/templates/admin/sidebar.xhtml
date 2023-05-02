@@ -1,45 +1,133 @@
-<ui:composition xmlns="http://www.w3.org/1999/xhtml"
-    xmlns:h="http://java.sun.com/jsf/html"
-    xmlns:ui="http://java.sun.com/jsf/facelets"
-    xmlns:f="http://xmlns.jcp.org/jsf/core">
+
     
-    <h:form>
-        <nav class="navbar navbar-expand d-flex flex-column align-item-start px-3 sidebar-nav">
-            <a href="#" class="navbar-brand text-light mt-5">
-                <div class="display-5 font-weight-bold">Admin</div>
-            </a>
-            <ul class="navbar-nav d-flex flex-column mt-5 w-100">
-                <li class="nav-item w-100">
-                    <span class="nav-link pl-4">
-                        <i  class=" text-light bi bi-speedometer2 me-2"></i>
-                        <h:commandButton styleClass=" text-light border-0 bg-transparent" 
-                            action = "/resources/templates/dashboardTemplate.xhtml" value = "Dashboard" />
-                    </span>
-                </li>
-                <li class="nav-item w-100">
-                    <span class="nav-link pl-4">
-                        <i  class=" text-light bi bi-people-fill me-2"></i>
-                        <h:commandButton styleClass=" text-light border-0 bg-transparent" 
-                            action = "/pages/admin/index" value = "Administrateurs" />
-                    </span>
-                </li>
-                <li class="nav-item w-100">
-                    <span class="nav-link pl-4">
-                        <i  class=" text-light bi bi-people-fill me-2"></i>
-                        <h:commandButton styleClass=" text-light border-0 bg-transparent" 
-                            action = "/pages/contribuable/index" value = "Contribuables" />
-                    </span>
-                </li>
+    <ui:composition xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+        
+        <nav class="sidebar">
+            <div class="top-sidebar">
+                <p:link value="Dashboard" class="no-underline logo">
+                    <p:graphicImage value="/image/image_4.png"/>
+                    <f:param name="indexId" value="10"/>
+                </p:link>
+               
+              </div>
+            
 
+            <div class="menu-content">
+              <ul class="menu-items">
+                
+                    <li class="item">
+                      <p:link class="no-underline nav-link" >
+                            <i class="pi pi-th-large mr-2" style="font-size: 1rem"></i>
+                            Dashboard
+                            <f:param name="indexId" value="10"/>
+                        </p:link>
+                    </li>
+                
+                    <li class="item">
+                        <div class="submenu-item">
+                            <span>
+                                <i class="pi pi-user mr-2" style="font-size: 1rem"></i>
+                                Administrateur
+                            </span>
+                             <i class="pi pi-chevron-right"></i>
+                        </div>
 
-                <li class="nav-item">
-                    <span class="nav-link pl-4">
-                        <i class=" text-light bi bi-box-arrow-in-right me-2"></i>
-                        <h:commandButton styleClass=" text-light border-0 bg-transparent" 
-                            action = "page2" value = "Se deconnecte" />
-                    </span>
-                </li>
-            </ul>
-        </nav>		
-    </h:form>
-</ui:composition>
+                        <ul class="menu-items submenu">
+                            <div class="menu-title">
+                              <i class="pi pi-chevron-left"></i>
+                              Retour
+                            </div>
+                            <li class="item">
+                                <p:link class="no-underline nav-link" >
+                                    <i class="pi pi pi-users mr-2" style="font-size: 1rem"></i>
+                                    Administrateurs
+                                    <f:param name="indexId" value="10"/>
+                                </p:link>
+                            </li>
+
+                            <li class="item">
+                                <p:link class="no-underline nav-link" >
+                                    <i class="pi pi-flag mr-2" style="font-size: 1rem"></i>
+                                    Province
+                                    <f:param name="indexId" value="10"/>
+                                </p:link>
+                            </li>
+
+                            <li class="item">
+                                <p:link class="no-underline nav-link" >
+                                    <i class="pi pi-map mr-2" style="font-size: 1rem"></i>
+                                    Commune
+                                    <f:param name="indexId" value="10"/>
+                                </p:link>
+                            </li>
+
+                            <li class="item">
+                                <p:link class="no-underline nav-link" >
+                                    <i class="pi pi-map-marker mr-2" style="font-size: 1rem"></i>
+                                    Colline
+                                    <f:param name="indexId" value="10"/>
+                                </p:link>
+                            </li>
+
+                            <li class="item">
+                                <p:link class="no-underline nav-link" >
+                                    <i class="pi pi-building mr-2" style="font-size: 1rem"></i>
+                                    Avenue
+                                    <f:param name="indexId" value="10"/>
+                                </p:link>
+                            </li>
+
+                            <li class="item">
+                                <p:link class="no-underline nav-link" >
+                                    <i class="pi pi-trash mr-2" style="font-size: 1rem"></i>
+                                    Archives
+                                    <f:param name="indexId" value="10"/>
+                                </p:link>
+                            </li>
+
+                        </ul>
+                    </li>
+
+                    <li class="item">
+                        <div class="submenu-item">
+                            <span>
+                                <i class="pi pi-user mr-2" style="font-size: 1rem"></i>
+                                Contribuable
+                            </span>
+                             <i class="pi pi-chevron-right"></i>
+                        </div>
+
+                        <ul class="menu-items submenu">
+                            <div class="menu-title">
+                              <i class="pi pi-chevron-left"></i>
+                              Retour
+                            </div>
+                            <li class="item">
+                                <p:link class="no-underline nav-link" >
+                                    <i class="pi pi pi-users mr-2" style="font-size: 1rem"></i>
+                                    Contribuables
+                                    <f:param name="indexId" value="10"/>
+                                </p:link>
+                            </li>
+
+                            <li class="item">
+                                <p:link class="no-underline nav-link" >
+                                    <i class="pi pi-calculator mr-2" style="font-size: 1rem"></i>
+                                    Declaraton
+                                    <f:param name="indexId" value="10"/>
+                                </p:link>
+                            </li>
+
+                        </ul>
+                    </li>
+                
+              </ul>
+            </div>
+        </nav>
+        
+   </ui:composition>
+  
