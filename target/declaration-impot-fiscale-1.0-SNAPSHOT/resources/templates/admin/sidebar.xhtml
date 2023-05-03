@@ -7,44 +7,50 @@
       xmlns:f="http://xmlns.jcp.org/jsf/core">
         
         <nav class="sidebar">
-            <div class="top-sidebar">
-                <p:link value="Dashboard" class="no-underline logo">
-                    <p:graphicImage value="/image/image_4.png"/>
-                    <f:param name="indexId" value="10"/>
-                </p:link>
-               
-              </div>
+            <!-- =============== logo ================= -->
+            <div class="logo-details">
+                <span class="logo_name">
+                    Impot Fiscale
+                </span>
+            </div>
             
 
+            <!-- =============== sidebar menu-content ================= -->
+
             <div class="menu-content">
-              <ul class="menu-items">
                 
+              <ul class="menu-items">
+                    
+                    <!-- =============== Dashboard ================= -->
+
                     <li class="item">
                       <p:link class="no-underline nav-link" >
                             <i class="pi pi-th-large mr-2" style="font-size: 1rem"></i>
-                            Dashboard
+                            <span class="link_name">Dashboard</span>
                             <f:param name="indexId" value="10"/>
                         </p:link>
                     </li>
                 
+                    <!-- =============== Administrateur section ================= -->
+
                     <li class="item">
                         <div class="submenu-item">
                             <span>
                                 <i class="pi pi-user mr-2" style="font-size: 1rem"></i>
-                                Administrateur
+                                <span class="link_name">Administrateur</span>
                             </span>
                              <i class="pi pi-chevron-right"></i>
                         </div>
-
+                                                
                         <ul class="menu-items submenu">
                             <div class="menu-title">
                               <i class="pi pi-chevron-left"></i>
-                              Retour
+                              <span class="link_name">Retour</span>
                             </div>
                             <li class="item">
                                 <p:link class="no-underline nav-link" >
                                     <i class="pi pi pi-users mr-2" style="font-size: 1rem"></i>
-                                    Administrateurs
+                                    <span class="link_name">Administrateurs</span>
                                     <f:param name="indexId" value="10"/>
                                 </p:link>
                             </li>
@@ -90,13 +96,16 @@
                             </li>
 
                         </ul>
+                        
                     </li>
+
+                    <!-- =============== contribuable section ================= -->
 
                     <li class="item">
                         <div class="submenu-item">
                             <span>
                                 <i class="pi pi-user mr-2" style="font-size: 1rem"></i>
-                                Contribuable
+                                <span class="link_name">Contribuable</span>
                             </span>
                              <i class="pi pi-chevron-right"></i>
                         </div>
