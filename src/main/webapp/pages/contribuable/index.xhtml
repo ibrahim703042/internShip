@@ -1,66 +1,80 @@
-<ui:composition xmlns="http://www.w3.org/1999/xhtml"
-    xmlns:h="http://java.sun.com/jsf/html"
-    xmlns:ui="http://java.sun.com/jsf/facelets"
-    xmlns:f="http://xmlns.jcp.org/jsf/core"
-    template="/resources/templates/dashboardTemplate.xhtml">
-    
-    <ui:define name = "contents">
-        
-        <div class="row">
-                <div class="col-md-12 mb-3">
-                    <div class="card">
-                        <div class="card-header">
-                            <span><i class="h4 bi bi-table me-2"></i></span>
-                            <h:outputText class="h6" value="contribuables" />
-                            <button type="button" class="btn btn-primary float-end">
-                                Add admin
-                            </button>
-                        </div>
-                        <div class="card-body">
-                            <div class="table-responsive">
-                                <table class="table table-bordered table-striped">
-                                    <thead>
-                                        <tr class="bg-dark text-light">
-                                            <th>ID</th>
-                                            <th>Full name</th>
-                                            <th>E-mail</th>
-                                            <th>Contact</th>
-                                            <th>Address</th>
-                                            <th colspan="2"></th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <th scope="row">1</th>
-                                            <td>Kwizera Ibrahim</td>
-                                            <td>Kwizera.ibrahim@gmail.com</td>
-                                            <td>+257 68274651</td>
-                                            <td>Bujumbura</td>
-                                            <td>
-                                                <h:form>
-                                                    <h:commandLink value="" class="text-info">
-                                                        <i class="bi bi-pencil-square"></i>
-                                                    </h:commandLink>
-                                                 </h:form>
-                                            </td>
-                                            <td>
-                                                <h:form>
-                                                    <h:commandLink value="" class="text-danger" 
-                                                        onclick="if (!confirm('Are you sure want to delete this employee?')) return false">
-                                                        <i class="bi bi-trash"></i>
-                                                    </h:commandLink>
-                                                </h:form>
-                                            </td>
+    <ui:composition
+        xmlns = "http://www.w3.org/1999/xhtml"   
+        xmlns:h = "http://java.sun.com/jsf/html"
+        xmlns:ui = "http://java.sun.com/jsf/facelets"
+        xmlns:p="http://primefaces.org/ui"
+        xmlns:f="http://xmlns.jcp.org/jsf/core"
+        xmlns:component="http://xmlns.jcp.org/jsf/composite/component"
+        template = "/resources/templates/dashboardTemplate.xhtml">
 
-                                        </tr>
-                                    </tbody>
-                                </table>
+        <ui:define name ="contents">
+
+            <h:form>
+                <div class="card">
+                    
+                    <div class="card-container pt-5 pb-5 pr-3 pl-3">
+
+                        <div class="ui-fluid formgrid grid">
+                            <div class="field col-12 md:col-6">
+                                
+                                <component:inputTextField
+                                    label="Nom"
+                                    placeholder="Entrer nom"
+                                    value="#{contribuable.nom}"
+                                />
+
                             </div>
+                            <div class="field col-12 md:col-6">
+                                <component:inputTextField
+                                    label="Prenom"
+                                    placeholder="Entrer prenom"
+                                    value="#{contribuable.prenom}"
+                                />
+                            </div>
+                            
+                            <div class="field col-12 md:col-6">
+                                <component:inputTextField
+                                    label="E-mail"
+                                    placeholder="Entrer email "
+                                    value="#{contribuable.email}"
+                                />
+
+                            </div>
+                            <div class="field col-12 md:col-6">
+                                <component:inputTextField
+                                    label="Mot de passe"
+                                    placeholder="Entrer Mot de passe"
+                                    value="#{contribuable.password}"
+                                    type="password"
+                                />
+                            </div>
+                            
+                            <div class="field col-12 md:col-6">
+                                <component:inputTextField
+                                    label="Boite postal"
+                                    placeholder="B.P 1023456 "
+                                    value="#{contribuable.BP}"
+                                />
+
+                            </div>
+                            <div class="field col-12 md:col-6">
+                                <component:inputTextField
+                                    label="Telephone"
+                                    placeholder="+257 71 20 47 78"
+                                    value="#{contribuable.telephone}"
+                                    type="number"
+                                />
+                            </div>
+                            
+                            
+                            
+                            
                         </div>
                     </div>
+                    
                 </div>
-            </div>
-    
-    </ui:define>
-        
-</ui:composition>
+            </h:form>
+
+        </ui:define>
+
+    </ui:composition>	

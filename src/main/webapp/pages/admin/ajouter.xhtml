@@ -1,48 +1,77 @@
-<ui:composition xmlns="http://www.w3.org/1999/xhtml"
-    xmlns:h="http://java.sun.com/jsf/html"
-    xmlns:ui="http://java.sun.com/jsf/facelets"
-    xmlns:f="http://xmlns.jcp.org/jsf/core"
-    template="/resources/templates/dashboardTemplate.xhtml">
-    
-    <ui:define name = "contents">
-        
-        <!-- ______________  begin breadcrumb ______________ -->
-        
-        <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+<ui:composition
+xmlns = "http://www.w3.org/1999/xhtml"   
+xmlns:h = "http://java.sun.com/jsf/html"
+xmlns:ui = "http://java.sun.com/jsf/facelets"
+xmlns:p="http://primefaces.org/ui"
+xmlns:f="http://xmlns.jcp.org/jsf/core"
+xmlns:component="http://xmlns.jcp.org/jsf/composite/component"
+template = "/resources/templates/dashboardTemplate.xhtml">
 
-            <ol class="breadcrumb">
-                <li class="breadcrumb-item">
-                    <h:link outcome="/resources/templates/dashboardTemplate.xhtml" >
-                        Dashboard
-                    </h:link>
-                </li>
+<ui:define name ="contents">
 
-                <li class="breadcrumb-item">
-                    <h:link outcome="/pages/admin/index.xhtml">
-                        Listes
-                    </h:link>
-                </li>
-                
-                <li class="breadcrumb-item active" aria-current="page">
-                    Administrateur
-                </li>
+    <h:form>
+        <div class="card">
+            
+            <div class="card-container pt-5 pb-5 pr-3 pl-3">
 
-            </ol>
-                
-        </nav>
-        
-        <!-- ______________end breadcrumb ______________ -->
+                <div class="ui-fluid formgrid grid">
+                    <div class="field col-12 md:col-6">
+                        
+                        <component:inputTextField
+                            label="Nom"
+                            placeholder="Entrer nom"
+                            value="#{administrateur.nom}"
+                        />
 
-        <div class="row mt-5 pt-5">
-                <div class="col-md-12 mb-3">
-                    <div class="card">
-                        <div class="card-body">
-                            <h2>Ajouter</h2>
-                        </div>
                     </div>
+                    <div class="field col-12 md:col-6">
+                        <component:inputTextField
+                            label="Prenom"
+                            placeholder="Entrer prenom"
+                            value="#{administrateur.prenom}"
+                        />
+                    </div>
+                    
+                    <div class="field col-12 md:col-6">
+                        <component:inputTextField
+                            label="E-mail"
+                            placeholder="Entrer email "
+                            value="#{administrateur.email}"
+                        />
+
+                    </div>
+                    <div class="field col-12 md:col-6">
+                        <component:inputTextField
+                            label="Mot de passe"
+                            placeholder="Entrer Mot de passe"
+                            value="#{administrateur.password}"
+                            type="password"
+                        />
+                    </div>
+                    
+                    <div class="field col-12 md:col-6">
+                        <component:inputTextField
+                            label="Boite postal"
+                            placeholder="B.P 1023456 "
+                            value="#{administrateur.BP}"
+                        />
+
+                    </div>
+                    <div class="field col-12 md:col-6">
+                        <component:inputTextField
+                            label="Telephone"
+                            placeholder="+257 71 20 47 78"
+                            value="#{administrateur.telephone}"
+                            type="number"
+                        />
+                    </div>
+                    
                 </div>
             </div>
-    
-    </ui:define>
-        
-</ui:composition>
+            
+        </div>
+    </h:form>
+
+</ui:define>
+
+</ui:composition>	

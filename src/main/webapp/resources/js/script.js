@@ -25,3 +25,5 @@ subMenuTitles.forEach((title) => {
 });
 
 console.log(menuItems, subMenuTitles);
+
+

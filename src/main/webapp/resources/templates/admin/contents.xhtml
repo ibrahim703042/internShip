@@ -1,12 +1,69 @@
 <ui:composition xmlns="http://www.w3.org/1999/xhtml"
-    xmlns:h="http://java.sun.com/jsf/html"
     xmlns:ui="http://java.sun.com/jsf/facelets"
+    xmlns:co = "http://java.sun.com/jsf/composite/component"
+    xmlns:h="http://xmlns.jcp.org/jsf/html"
+    xmlns:p="http://primefaces.org/ui"
     xmlns:f="http://xmlns.jcp.org/jsf/core"> 
     
+    <style>
+        .ui-breadcrumb .ui-menu-item-link:hover {
+            background-color: black !important;
+            border: none;
+        }
+          
+        p {
+            line-height: 1.5;
+            margin: 0;
+        }
+        
+    </style>
     
-    <main class="main">
-        <h1>Contents</h1>
-    </main>
-            
+    <!-- <div class="">
+     
+        <h:form>
+            <p:breadCrumb class="" >
+                <p:menuitem value="Electronics"/>
+                <p:menuitem value="Dashboard"/>       
+            </p:breadCrumb>
+        </h:form>
+    </div> -->
+    
+    <p:card >
+        <h:form>
+            <div class="card">
+                <p:dataTable var="contribuable" value="#{dtView.contribuables}">
+                    <p:column headerText="Matricule">
+                        <h:outputText value="#{contribuable.id}" />
+                    </p:column>
+
+                    <p:column headerText="Nom">
+                        <h:outputText value="#{contribuable.nom}" />
+                    </p:column>
+
+                    <p:column headerText="Prenom">
+                        <h:outputText value="#{contribuable.prenom}" />
+                    </p:column>
+
+                    <p:column headerText="E-mail">
+                        <h:outputText value="#{contribuable.email}" />
+                    </p:column>
+
+                    <p:column headerText="Telephone">
+                        <h:outputText value="#{contribuable.telephone}" />
+                    </p:column>
+
+                    <p:column headerText="B.P">
+                        <h:outputText value="#{contribuable.BP}" />
+                    </p:column>
+
+                    <p:column headerText="Date">
+                        <h:outputText value="#{contribuable.date}" />
+                    </p:column>
+
+                </p:dataTable>
+            </div>
+        </h:form>
+    </p:card>
+        
 </ui:composition>
   

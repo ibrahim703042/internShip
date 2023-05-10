@@ -126,7 +126,6 @@
 
 /* nav header && main content*/
 
-.navbar,
 .main {
   left: 260px;
   width: calc(100% - 260px);
@@ -138,9 +137,9 @@
 .navbar {
   position: fixed;
   color: darkgray;
+  top: 0;
   padding: 15px 20px;
   font-size: 25px;
-  background: white;
   cursor: pointer;
 }
 
@@ -148,12 +147,9 @@
   cursor: pointer;
 }
 
-
 .main {
   position: relative;
   display: flex;
-  align-items: center;
-  justify-content: center;
   height: 100vh;
   z-index: 100;
   background: whitesmoke;

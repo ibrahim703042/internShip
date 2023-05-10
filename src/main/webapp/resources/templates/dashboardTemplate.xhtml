@@ -21,13 +21,19 @@
         <ui:include src="/resources/templates/admin/sidebar.xhtml" />
     </ui:insert>
     
-    <ui:insert name = "header" >
-        <ui:include src = "/resources/templates/admin/header.xhtml" />
-    </ui:insert>
-    
-    <ui:insert name="contents" >
-        <ui:include src="/resources/templates/admin/contents.xhtml" />
-    </ui:insert>
+    <main class="main">
+        <div class="container" style="width:100%; padding: 10px;">
+            <ui:insert name = "header" >
+                <ui:include src = "/resources/templates/admin/header.xhtml" />
+            </ui:insert>
+            <div class="card container" style="margin-top: 60px; background-color:white; ">
+                <ui:insert name="contents" >
+                    <ui:include src="/resources/templates/admin/contents.xhtml" />
+                </ui:insert>
+            </div>
+        </div>
+        
+    </main>
     
     <h:outputScript library="js" name="script.js"/>
      
